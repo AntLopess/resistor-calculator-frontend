@@ -1,0 +1,148 @@
+/* Visualizer Container */
+.visualizer-container {
+  width: 100%;
+}
+
+.visualizer-container h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+/* Resistor Visual */
+.resistor-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  min-height: 200px;
+}
+
+.resistor-body {
+  position: relative;
+  width: 300px;
+  height: 120px;
+  background: linear-gradient(180deg, #f0f0f0 0%, #e8e8e8 100%);
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+}
+
+.resistor-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 85%;
+  height: 100%;
+}
+
+/* Faixas de Cores */
+.band {
+  height: 80px;
+  width: 20px;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.band-1 {
+  flex-shrink: 0;
+}
+
+.band-2 {
+  flex-shrink: 0;
+}
+
+.band-3 {
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.band-4 {
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+/* Terminais */
+.terminal {
+  position: absolute;
+  width: 60px;
+  height: 12px;
+  background: linear-gradient(90deg, #d4af37 0%, #aa8c2c 100%);
+  border-radius: 6px;
+}
+
+.terminal-left {
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.terminal-right {
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Band Legend */
+.band-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.legend-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.legend-label {
+  display: block;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.legend-value {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .resistor-body {
+    width: 250px;
+    height: 100px;
+  }
+
+  .band {
+    height: 60px;
+    width: 16px;
+  }
+
+  .terminal {
+    width: 40px;
+    height: 10px;
+  }
+
+  .terminal-left {
+    left: -40px;
+  }
+
+  .terminal-right {
+    right: -40px;
+  }
+
+  .band-legend {
+    grid-template-columns: 1fr;
+  }
+}
