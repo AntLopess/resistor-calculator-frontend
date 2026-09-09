@@ -1,55 +1,38 @@
-/* Dashboard */
-.dashboard {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Dashboard Header */
-.dashboard-header {
+/* Dashboard Tabs */
+.dashboard-tabs {
+  display: flex;
+  gap: 0;
   background: white;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0 40px;
+  sticky: position;
+  top: 60px;
+  z-index: 50;
 }
 
-.dashboard-header h1 {
-  color: #667eea;
-  font-size: 28px;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.user-info span {
-  color: #333;
-  font-weight: 500;
-}
-
-.btn-logout {
-  padding: 10px 20px;
-  background: #ff6b6b;
-  color: white;
+.tab-button {
+  padding: 16px 30px;
   border: none;
-  border-radius: 5px;
+  background: none;
+  color: #666;
+  font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
+  position: relative;
   transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
 }
 
-.btn-logout:hover {
-  background: #ff5252;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+.tab-button:hover {
+  color: #333;
 }
 
-/* Dashboard Content */
+.tab-button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+/* Dashboard Content - Ajustado para abas */
 .dashboard-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,5 +65,14 @@
 
   .dashboard-header h1 {
     font-size: 24px;
+  }
+
+  .dashboard-tabs {
+    padding: 0 20px;
+  }
+
+  .tab-button {
+    padding: 12px 20px;
+    font-size: 14px;
   }
 }
